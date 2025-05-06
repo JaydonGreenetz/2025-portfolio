@@ -1,39 +1,50 @@
 body {
     margin: 0px;
-    display:flex;
     justify-content: center;
-    background-image: src="image/background.png";
+}
+
+
+body {
+    background-image: url("/image/background.png");
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-size: cover; /* Ensures the image covers the entire viewport */
+    background-position: center; /* Centers the image */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
 }
 
 #main_container {
     width: 1024px;
     height: 1000px;
     margin: 0px auto;
-    border: 1px solid #000;
-    background-color: rgb(30, 146, 255);
+    border: 1px solid #ff0000;
+    /* background-color: rgb(30, 146, 255); */
     display:flex;
     justify-content: center;
     flex-direction: column;
-;
+
 }
 
-.bg {
-    background-image: url("image/background.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 1024px;
-    height: 1000px;
-}
+
 
 #header {
     width: 100%;
-    height: 150px;
-    background-color: rgb(255, 255, 255);
+    height: 150px;  
+    position: relative; top: -399px;
+
 }
 
+#my-name {
+    font-size: 70pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative; top: -125px;
+    position: relative; left: 68px;
+    color: #316017;
+    justify-self: top;
+    justify-self: center;
+}
 
-
-#about-me {
+#nav-bar {
     width: 1018px;
     height: 46px;
     background-color: #316017;
@@ -41,10 +52,11 @@ body {
     margin: 0px;
     justify-content: center;
     flex-direction: column;
-    position: relative; top: -50px;
+    position: relative; top: -400px;
     
 }
 
-h1 {
-    color:#316017
+#logo {
+    position: relative; top: 50px;
+
 }
