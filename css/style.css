@@ -1,5 +1,5 @@
 body {
-    /* justify-content: center; */
+    justify-content: center;
     background-image: url("/image/background.png");
     background-repeat: no-repeat; /* Prevents tiling */
     background-size: cover; /* Ensures the image covers the entire viewport */
@@ -7,18 +7,20 @@ body {
     margin: 0; /* Removes default margin */
     padding: 0; Removes default padding */
     display: flex;
+    flex-wrap: wrap;
+
 }
 
 #main_container {
-    width: 1024px;
+    width: 100%;
     height: 2000px;
     margin: 0px auto;
-    border: 1px solid #ff0000;
     /* background-color: rgb(30, 146, 255); */
     display:flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 
 }
 
@@ -26,41 +28,48 @@ body {
 
 #header {
     width: 100%;
-    height: 150px;  
-    justify-content: space-evenly;
+    height: 200px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px; /* Adds padding to the left and right */
+    box-sizing: border-box;
 
 
+}
+
+#logo {
+    height: 150px;
+    width: auto;
 }
 
 #my-name {
-    font-size: 70pt;
+    font-size: 120pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: relative; top: -145px;
-    position: relative; left: 68px;
     color: #316017;
+    position: static;
 }
 
 #nav-bar {
-    width: 1018px;
-    height: 46px;
+    width: 100%;
+    height: 75px;
     background-color: #316017;
-    border: solid 3px #FFFBE1;
+    border: solid 4px #FFFBE1;
     margin: 0px;
     display: flex;
     justify-content: center;
+
     
     
 }
 #nav-list {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFBE1;
     justify-content: space-evenly;  
     justify-content: space-between;
 }
 
 #introduction {
    align-content: space-around;
-   border: solid 3px #ffdd00;
 }
 
 ul {
@@ -72,14 +81,63 @@ ul {
     align-items: center;
     width: 100%;
     height: 100%;
+    padding: 0 80px; /* Adds space between the list items and the edges of the ul */
 }
 
 li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30pt;
+    font-weight:bold;
     color: #FFFBE1;
     justify-content: space-evenly;  
     justify-content: space-between;
 }
 
 
+/* Style for links */
+a {
+    color: #FFFBE1; /* Replace with your desired color */
+    text-decoration: none; /* Removes the underline */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+/* Optional: Add hover effect for better user experience */
+a:hover {
+    color: #C70039; /* Replace with your desired hover color */
+    text-decoration: underline; /* Adds underline on hover (optional) */
+}
+
+#title-ab {
+    height: 400px;
+    font-size: 60pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFBE1;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-direction: space-between;
+    gap: 50px;
+}
+
+#photo {
+    height: 266.6666666666667px;
+    width: auto;
+    margin: 0px;
+}
+#real-about-me {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #316017;
+    border: solid 3px #FFFBE1;
+    margin: 0px;
+    color: #FFFBE1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    align-items: start;
+}
