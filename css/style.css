@@ -16,7 +16,7 @@ body {
     margin: 0; /* Removes default margin */
     padding: 0;
     display: flex;
-    overflow-y: hidden;
+    overflow-y:hidden;
 
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 #my-name {
-    font-size: 100pt;
+    font-size: 90pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #316017;
     position: static;
@@ -69,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding: 40px;
     
     
 }
@@ -119,7 +120,7 @@ ul {
 
 li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight:bold;
     color: #FFFBE1;
     justify-content: space-evenly;  
@@ -144,7 +145,7 @@ a:hover {
 
 #title-ab {
     height: 400px;
-    font-size: 60pt;
+    font-size: 40pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -174,13 +175,13 @@ a:hover {
     margin: 0px;
     color: #FFFBE1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight: bold;
     align-items: start;
 }
 
 #writing {
-    height: 400px;  
+    height: 250px;  
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -190,7 +191,7 @@ a:hover {
 }
 
 #writing-title {
-    font-size: 120pt;
+    font-size: 40pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -203,15 +204,10 @@ a:hover {
 
 }
 
-#arrow {
-    font-size: 80px;
-    font-weight: bolder;
-    color: #FFFBE1;
-    margin-top: 35px
-}
+
 
 #Artwork-title {
-    font-size: 120pt;
+    font-size: 40pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -223,8 +219,8 @@ a:hover {
 }
 
 #general-artwork {
-width: 99.99%;
-    height: 400px;
+    width: 99.99%;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,7 +229,7 @@ width: 99.99%;
     margin: 0px;
     color: #FFFBE1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight: bold;
     align-items: start;
 }
@@ -246,7 +242,7 @@ width: 99.99%;
 
 /* This starts the code for page 2 of my website (my writing pieces)  */
 #wp-writing-title {
-    font-size: 120pt;
+    font-size: 90pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -259,13 +255,14 @@ width: 99.99%;
 }
 
 #fourimage {
-    height: 700px;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-template-rows: repeat(2, 1fr);    /* 2 rows */
-    gap: 20px; /* space between images */
+    gap: 120px; /* space between images */
     justify-items: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 #fourimage img {
@@ -274,4 +271,78 @@ width: 99.99%;
     height: auto;
     object-fit: cover;
     border-radius: 9px;
+}
+
+
+#link-section {
+    width: 99.99%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #316017;
+    border: solid 3px #FFFBE1;
+    margin: 0px;
+    color: #FFFBE1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+#id-of-link-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFBE1;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#second {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns of equal width */
+    grid-gap: 20px; /* Add spacing between grid items */
+    width: 50%; /* Ensure it spans the full width of the parent */
+    justify-content: center; /* Center the grid within the parent */
+    list-style-type: disc;
+    margin-top: 10px; /* Add spacing above the grid */
+}
+
+#second > * {
+    font-size: 30pt;
+    padding: 10px; /* Optional: Add padding for better spacing */
+    text-align: center; /* Center text inside each grid item */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+
+#education {
+    width: 99.99%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #316017;
+    border: solid 3px #FFFBE1;
+    margin: 0px;
+    color: #FFFBE1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    align-items: center;
+}
+
+
+#edu-para {
+    color: #FFFBE1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    align-items: center;
 }
