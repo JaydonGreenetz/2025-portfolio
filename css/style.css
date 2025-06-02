@@ -40,24 +40,37 @@ body {
     height: 165px;  
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 0 200px; /* Adds padding to the left and right */
+    padding: clamp(20px, 5vw, 40px); /* Dynamically adjust padding */
     box-sizing: border-box;
     gap: 60px;
 
 }
 
 #logo {
-    height: 150px;
-    width: auto;
-}
+    height: 200; /* Maintain aspect ratio */
+    width: 100%; /* Allow the image to shrink with its container */
+    max-width: 200px; /* Set a maximum width for the image */
+    object-fit: contain; /* Ensure the image scales properly */
 
+}
+#name {
+    font-size: clamp(40px, 8vw, 80pt); /* Dynamically adjust font size */
+    flex-wrap: wrap;
+    width: 100%;
+    position: static;
+    magrin: 0px;
+    display: flex;
+    white-space: nowrap; /* Prevent text wrapping */
+}
 #my-name {
     font-size: 80pt;
+    font-size: clamp(40px, 8vw, 80pt); /* Dynamically adjust font size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #316017;
-    position: static;
     text-wrap: nowrap;
+    max-width: 100%; /* Ensure the div doesn't exceed the viewport width */
     
 }
 
@@ -110,8 +123,8 @@ body {
    position: fixed;
    top: 0;
    left: 0;
-    width: 100%;
-    z-index: 1000;
+   width: 100%;
+   z-index: 1000;
    background-image: url("../image/background.png"); /* Update with your image path */
    background-size: cover;      /* Make the image cover the section */
    background-repeat: no-repeat; /* Prevent tiling */
@@ -357,4 +370,26 @@ a:hover {
     font-size: 20pt;
     font-weight: bold;
     align-items: center;
+}
+
+
+#wassupbro {
+
+}
+
+#buttonexample {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    margin-top: 20px;
+    color: #000
+    transition-property: background-color, color;
+    transition-duration: .5s;
+}
+
+#buttonexample:hover {
+    transition-property: background-color, color;
+    transition-duration: .5s;
+    background-color: #000;
+    color: #fff;
 }
