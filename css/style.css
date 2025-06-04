@@ -17,6 +17,7 @@ body {
     padding: 0;
     display: flex;
     overflow-y:hidden;
+    overflow-x: hidden;
 
 }
 
@@ -28,7 +29,6 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
 
 }
 
@@ -38,40 +38,45 @@ body {
     top: 0;
     width: 100%;
     height: 165px;  
+    min-width: 100vw;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 200px; /* Adds padding to the left and right */
     padding: clamp(20px, 5vw, 40px); /* Dynamically adjust padding */
     box-sizing: border-box;
     gap: 60px;
-
+    gap: clamp(20px, 5vw, 60px); /* Dynamically adjust gap */
+    margin-left: 15%;
+    margin-left: clamp(1px, 15vw, 10%); /* Dynamically adjust margin */
+    margin-right: 50%;
 }
 
 #logo {
-    height: 200; /* Maintain aspect ratio */
+    height: 200px; /* Maintain aspect ratio */
     width: 100%; /* Allow the image to shrink with its container */
     max-width: 200px; /* Set a maximum width for the image */
+    min-width: 120px; /* Set a minimum width for the image */
     object-fit: contain; /* Ensure the image scales properly */
 
 }
 #name {
-    font-size: clamp(40px, 8vw, 80pt); /* Dynamically adjust font size */
+    font-size: clamp(20px, 8vw, 70pt); /* Dynamically adjust font size */
     flex-wrap: wrap;
     width: 100%;
     position: static;
-    magrin: 0px;
+    margin: 0px;
     display: flex;
     white-space: nowrap; /* Prevent text wrapping */
 }
 #my-name {
     font-size: 80pt;
-    font-size: clamp(40px, 8vw, 80pt); /* Dynamically adjust font size */
+    font-size: clamp(20px, 8vw, 80pt); /* Dynamically adjust font size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #316017;
     text-wrap: nowrap;
     max-width: 100%; /* Ensure the div doesn't exceed the viewport width */
-    
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 #nav-bar {
@@ -146,7 +151,6 @@ ul {
 
 li {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20pt;
     font-weight:bold;
     color: #FFFBE1;
     justify-content: space-evenly;  
@@ -156,15 +160,19 @@ li {
 
 /* Style for links */
 a {
+    font-size: 20pt;
     color: #FFFBE1; /* Replace with your desired color */
     text-decoration: none; /* Removes the underline */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: font-size 0.3s ease, text-shadow 1s ease, color 1s ease;
 }
 
 /* Optional: Add hover effect for better user experience */
 a:hover {
-    color: #C70039; /* Replace with your desired hover color */
-    text-decoration: underline; /* Adds underline on hover (optional) */
+    color: #FFFBE1; /* Replace with your desired hover color */
+    text-shadow:  0 0 8px #FFD600, 0 0 16px #FFD600;
+    text-decoration: none; /* Adds underline on hover (optional) */
+    font-size: 25pt; /* Slightly increase font size on hover */
 }
 
 /* This is the end to my header and nav bar */
@@ -172,6 +180,7 @@ a:hover {
 #title-ab {
     height: 400px;
     font-size: 30pt;
+    font-size: clamp(20px, 4vw, 30pt); /* Dynamically adjust font size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -182,15 +191,17 @@ a:hover {
     justify-content: space-between;
     gap: 50px;
     margin-top: 300px; /* Same as #introduction height */
-    /* ...other styles... */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 #photo {
-    height: 266.6666666666667px;
+    height: 250px;
+    height: clamp(150px, 20vw, 250px); /* Dynamically adjust height */
     width: auto;
     margin: 0px;
 }
 #real-about-me {
+    contain: content;
     width: 99.99%;
     height: 300px;
     justify-content: center;
@@ -200,13 +211,13 @@ a:hover {
     margin: 0px;
     color: #FFFBE1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20pt;
+    font-size: clamp(4px, 3vw, 20pt); /* Dynamically adjust font size */
     font-weight: bold;
     align-items: start;
 }
 
 #writing {
-    height: 250px;  
+    height: 250px;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -217,6 +228,7 @@ a:hover {
 
 #writing-title {
     font-size: 30pt;
+    font-size: clamp(20px, 4vw, 30pt); /* Dynamically adjust font size */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #FFFBE1;
     position: static;
@@ -229,7 +241,17 @@ a:hover {
 
 }
 
+#arrow {
+    height: 90px;
+    height: clamp(50px, 10vw, 90px); /* Dynamically adjust height */
+    width: auto;
+    transition: filter 0.4s ease;
 
+}
+
+#arrow:hover {
+    filter: invert(48%) sepia(98%) saturate(7492%) hue-rotate(85deg) brightness(1.1) contrast(1.2);
+}
 
 #Artwork-title {
     font-size: 30pt;
@@ -285,6 +307,7 @@ a:hover {
     grid-template-columns: repeat(2, 1fr); /* 2 columns */
     grid-template-rows: repeat(2, 1fr);    /* 2 rows */
     gap: 120px; /* space between images */
+    gap: clamp(5px, 5vw, 120px); /* Dynamically adjust gap */
     justify-items: center;
     align-items: center;
     margin-bottom: 20px;
@@ -292,6 +315,7 @@ a:hover {
 
 #fourimage img {
     width: 500px;
+    width: clamp(50px, 40vw, 500px); /* Dynamically adjust width */
     max-width: 1000px; /* adjust as needed */
     height: auto;
     object-fit: cover;
@@ -372,11 +396,6 @@ a:hover {
     align-items: center;
 }
 
-
-#wassupbro {
-
-}
-
 #buttonexample {
     width: 200px;
     height: 50px;
@@ -393,3 +412,82 @@ a:hover {
     background-color: #000;
     color: #fff;
 }
+
+@media screen and (max-width: 550px) {
+    #header {
+        top: 0;
+        width: 500px;
+        height: 165px;  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        padding: clamp(20px, 5vw, 20px);
+        box-sizing: border-box;
+        gap: 10px;
+        margin-left: 15px;
+    }
+
+
+
+    #logo {
+        height: 90px;
+        width: auto
+        max-width: 200px;
+        min-width: 120px;
+        object-fit: contain;
+    }
+
+    #name {
+        font-size: 20px;
+        width: 100%;
+        position: static;
+        margin: 0px;
+        display: flex;
+        white-space: nowrap; 
+    }
+    #my-name {
+        font-size: 25pt;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #316017;
+        text-wrap: nowrap;
+        max-width: 100%;
+
+
+        #fourimage {
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+            gap: 120px; /* space between images */
+            gap: clamp(20px, 5vw, 120px); /* Dynamically adjust gap */
+            justify-items: center;
+            align-items: center;
+            margin-bottom: 20px;
+    }
+  }
+}
+
+
+#wpmain {
+    padding-top: 350px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFBE1;
+    padding-bottom: 100px;
+    font-size: 30pt;
+}
+
+#mouse {
+    padding-bottom: 50px;
+}
+
+#poems {
+    padding-bottom: 5px;
+}
+
