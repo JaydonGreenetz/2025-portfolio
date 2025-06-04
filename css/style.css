@@ -395,6 +395,7 @@ a:hover {
     font-weight: bold;
     align-items: center;
 }
+<<<<<<< HEAD
 
 #buttonexample {
     width: 200px;
@@ -425,7 +426,7 @@ a:hover {
         padding: clamp(20px, 5vw, 20px);
         box-sizing: border-box;
         gap: 10px;
-        margin-left: 15px;
+        margin-left: 15.1px;
     }
 
 
@@ -491,3 +492,5 @@ a:hover {
     padding-bottom: 5px;
 }
 
+=======
+>>>>>>> 0604094c4abd9a55d587077f190de1d1ab4372d0
