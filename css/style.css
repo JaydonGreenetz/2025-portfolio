@@ -47,9 +47,7 @@ body {
     box-sizing: border-box;
     gap: 60px;
     gap: clamp(20px, 5vw, 60px); /* Dynamically adjust gap */
-    margin-left: 15%;
-    margin-left: clamp(1px, 15vw, 10%); /* Dynamically adjust margin */
-    margin-right: 50%;
+    overflow: hidden;
 }
 
 #logo {
@@ -63,7 +61,7 @@ body {
 #name {
     font-size: clamp(20px, 8vw, 70pt); /* Dynamically adjust font size */
     flex-wrap: wrap;
-    width: 100%;
+    max-width: 100%;
     position: static;
     margin: 0px;
     display: flex;
@@ -134,7 +132,7 @@ body {
    background-size: cover;      /* Make the image cover the section */
    background-repeat: no-repeat; /* Prevent tiling */
    background-position: center;  /* Center the image */
-   height: 200px; /* Set this to your actual height */
+   height: 200px; /* Set this to your actual height */;
 }
 
 ul {
@@ -281,26 +279,6 @@ a:hover {
     align-items: start;
 }
 
-
-
-
-
-
-
-/* This starts the code for page 2 of my website (my writing pieces)  */
-#wp-writing-title {
-    font-size: 80pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #FFFBE1;
-    position: static;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-direction: space-between;
-    gap: 50px;
-}
-
 #fourimage {
     height: auto;
     display: grid;
@@ -322,6 +300,20 @@ a:hover {
     border-radius: 9px;
 }
 
+
+/* This starts the code for page 2 of my website (my writing pieces)  */
+#wp-writing-title {
+    font-size: 80pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFFBE1;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-direction: space-between;
+    gap: 50px;
+}
 
 #link-section {
     width: 99.99%;
@@ -429,8 +421,6 @@ a:hover {
         margin-left: 15.1px;
     }
 
-
-
     #logo {
         height: 90px;
         width: auto
@@ -453,9 +443,9 @@ a:hover {
         color: #316017;
         text-wrap: nowrap;
         max-width: 100%;
+    }
 
-
-        #fourimage {
+    #fourimage {
             height: auto;
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* 2 columns */
@@ -466,7 +456,7 @@ a:hover {
             align-items: center;
             margin-bottom: 20px;
     }
-  }
+
 }
 
 
@@ -491,6 +481,3 @@ a:hover {
 #poems {
     padding-bottom: 5px;
 }
-
-=======
->>>>>>> 0604094c4abd9a55d587077f190de1d1ab4372d0
